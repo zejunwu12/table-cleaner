@@ -1,0 +1,67 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Python environments and local secrets
+.venv/
+venv/
+env/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pyc
+*.pyo
+
+# markdown files
+保险额度列填写情况分析总结.md
+保险额度标准化处理方案.md
+# 后续计划.md
+
+# Excel data files (不要上传业务数据)
+*.xlsx
+*.xls
+*.xlsm
+*.xlsb
+
+# Log files
+*.log
+
+# Backup and temporary directories
+bak/
+bak_*/
+tmp/
+tmp_*/
+eg/
+tdata/
+*/eg/
+*/tmp/
+*/bak/
+.uploads/
+.ipynb_checkpoints/
+test_data/
+
+# Separately maintained repository
+# /4.statistical_analysis/4.difference_report/
+
+# Output/result files
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Operating system
+Thumbs.db
+desktop.ini
+
+# Archives
+*.zip
+*.rar
+*.7z
+*.tar.gz
