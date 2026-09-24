@@ -27,6 +27,7 @@ env/
 
 # 虚构示例数据允许提交（真实业务数据仍被上方 *.xlsx 忽略）
 !examples/sample_input.xlsx
+!examples/sample_output.xlsx
 
 # Log files
 *.log
