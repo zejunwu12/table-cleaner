@@ -18,13 +18,15 @@ env/
 # markdown files
 保险额度列填写情况分析总结.md
 保险额度标准化处理方案.md
-# 后续计划.md
 
 # Excel data files (不要上传业务数据)
 *.xlsx
 *.xls
 *.xlsm
 *.xlsb
+
+# 虚构示例数据允许提交（真实业务数据仍被上方 *.xlsx 忽略）
+!examples/sample_input.xlsx
 
 # Log files
 *.log

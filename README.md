@@ -4,7 +4,7 @@
 
 - 脚本：`amount_unifier.py`（单文件，内部分层）
 - 依赖：`openpyxl`（`pip install openpyxl`）
-- 示例：`input.xlsx` → 结果 `input_clean_append_<时间戳>.xlsx`（自动生成，含模式与时间戳）
+- 示例数据：`examples/sample_input.xlsx`（虚构）→ 结果自动生成为 `{输入}_clean_{mode}_{时间戳}.xlsx`
 
 ---
 
@@ -37,6 +37,33 @@ for m in report.manual:                                    # 需人工记录
 # 复用单个值的换算（纯函数）
 normalize_amount("2004279.6元", "s").value     # -> 200.428
 normalize_amount("=11000000+2400000", "f", 13400000).value   # -> 13400000.0（公式如实保留）
+```
+
+### 3. 项目结构与本地运行
+
+```
+table-cleaner/
+├── amount_unifier.py      # 核心模块（单文件，可独立运行/调用）
+├── docs/roadmap.md        # 路线图
+├── examples/              # 虚构示例数据与生成脚本
+│   ├── sample_input.xlsx
+│   └── make_sample.py
+├── tests/                 # 单元测试（纯函数，不依赖真实数据）
+│   └── test_amount_unifier.py
+├── requirements.txt
+└── LICENSE
+```
+
+安装依赖、运行测试、生成示例：
+```bash
+pip install -r requirements.txt
+python -m unittest discover -s tests -v     # 运行测试
+python examples/make_sample.py              # 重新生成示例数据
+```
+
+用示例数据快速体验：
+```bash
+python amount_unifier.py -i examples/sample_input.xlsx -c H I
 ```
 
 ---
